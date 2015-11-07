@@ -7,11 +7,9 @@ ubuntu to compile and work with this package.
 
 import subprocess # for check_call
 
-packs=[
-	# for building from my own repo
-	'templar',
-	'pdmt',
+do_mine=False
 
+packs=[
 	# R core
 	'r-base-core',
 	'r-doc-info',
@@ -23,6 +21,13 @@ packs=[
 	'r-cran-plotrix',
 	'r-cran-snow',
 ]
+
+if do_mine:
+	packs.extend([
+		# for building from my own repo
+		'templar',
+		'pdmt',
+	])
 
 args=['sudo','apt-get','install','--assume-yes']
 args.extend(packs)
