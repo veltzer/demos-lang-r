@@ -4,7 +4,7 @@ all: tools.stamp
 
 tools.stamp: config/deps.py
 	$(info doing [$@])
-	@pymakehelper touch_mkdir $@
+	$(Q)pymakehelper touch_mkdir $@
 
 .PHONY: sloccount
 sloccount:
@@ -13,4 +13,4 @@ sloccount:
 
 .PHONY: clean
 clean:
-	find . -name ".RData" -or -name ".Rhistory" -exec rm {} \;
+	$(Q)find . -name ".RData" -or -name ".Rhistory" -exec rm {} \;
