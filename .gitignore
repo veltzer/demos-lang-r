@@ -1,7 +1,6 @@
-.RData
-.Rhistory
-/tools
-/tools.stamp
+/.RData
+/.Rhistory
+*.stamp
 __pycache__
 *.pyo
 *.pyc
