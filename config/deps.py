@@ -7,6 +7,7 @@ packages=[
     "r-doc-pdf",
     "build-essential",
     # R packages
+    "r-api-3.5",
     "r-cran-sm",
     "r-cran-plotrix",
     "r-cran-snow",
